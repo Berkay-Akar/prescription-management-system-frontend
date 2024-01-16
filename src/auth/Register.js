@@ -5,7 +5,7 @@ import { userContext } from "../App";
 
 export default function Register(props) {
   const siteUrl = "prescription-management-system-backend.vercel.app";
-  const registerEndpoint = `${siteUrl}/auth/signup`;
+  const registerEndpoint = `https://prescription-backend-tfos.onrender.com//auth/signup`;
   console.log(registerEndpoint);
   const { user } = useContext(userContext);
   const navigate = useNavigate();

@@ -9,7 +9,7 @@ function Home() {
   const { user } = useContext(userContext);
   const handleSearchByTC = async () => {
     const res = await fetch(
-      `http://localhost:3001/auth/findUser?tcNo=${searchTerm}`
+      `https://prescription-backend-tfos.onrender.com/auth/findUser?tcNo=${searchTerm}`
     );
     const data = await res.json();
 
@@ -23,7 +23,7 @@ function Home() {
 
   const handleSearchMedicine = async () => {
     const res = await fetch(
-      `http://localhost:3001/prescription/searchMedicines?name=${searchTerm}`
+      `https://prescription-backend-tfos.onrender.com/prescription/searchMedicines?name=${searchTerm}`
     );
     const data = await res.json();
 

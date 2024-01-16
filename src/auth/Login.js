@@ -6,7 +6,7 @@ import { useNavigate, Link } from "react-router-dom";
 
 function Login() {
   const siteUrl = process.env.SITE_URL;
-  const loginEndpoint = `${siteUrl}/auth/login`;
+  const loginEndpoint = `https://prescription-backend-tfos.onrender.com/auth/login`;
   const { user } = useContext(userContext);
   const navigate = useNavigate();
 
