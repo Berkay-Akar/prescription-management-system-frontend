@@ -33,6 +33,16 @@ function Home() {
     }
   };
 
+  const handleSendPrescription = async () => {
+    // Your code to send the prescription goes here
+    // Set datas to null (assuming this is how you clear the data)
+    setMedicines([]);
+    setTotalPrice(0);
+
+    // Show success alert
+    alert("Prescription sent successfully!");
+  };
+
   return (
     <div className="flex flex-col items-center justify-center h-screen">
       <p className="text-2xl font-bold mb-4">Hoşgeldin {user.PharmacyName}</p>
@@ -99,6 +109,14 @@ function Home() {
           <h3 className="text-xl font-bold mb-2">Toplam Tutar</h3>
           <p className="text-lg">{totalPrice} TL</p>
         </div>
+      </div>
+      <div className="mt-8">
+        <button
+          onClick={handleSendPrescription}
+          className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-md"
+        >
+          Send Prescription
+        </button>
       </div>
     </div>
   );

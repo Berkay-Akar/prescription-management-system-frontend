@@ -39,12 +39,15 @@ function Login() {
     try {
       const res = await axios.post(loginEndpoint, data);
       if (res.data.token) {
+        console.log("DATA:", data);
+        console.log("RES:", res.data);
         console.log("RES DATA:", res.data);
         const token = res.data.token;
         const user = res.data.user;
         localStorage.setItem("token", token);
         localStorage.setItem("user", JSON.stringify(user));
         setUser(user);
+        console.log("USER:", user);
         navigate("/");
       } else {
         throw new Error("Invalid Credentials");
